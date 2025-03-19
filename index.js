@@ -33,7 +33,7 @@ app.post("/predict", upload.single("image"), (req, res) => {
   const modelPath = path.join(__dirname, "best.pt");
 
   // Run Python script for prediction
-  const pythonProcess = spawn("python", [
+  const pythonProcess = spawn("python3", [
     "predict.py",
     "--image",
     imagePath,

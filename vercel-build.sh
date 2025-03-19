@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# Install Python
 echo "Installing Python..."
 apt-get update && apt-get install -y python3 python3-pip
 
-# Set default Python version
-ln -s /usr/bin/python3 /usr/bin/python
+# Ensure "python" command points to Python 3
+ln -s /usr/bin/python3 /usr/bin/python || true
 
-# Install dependencies
-echo "Installing Python dependencies..."
-pip install -r requirements.txt
+echo "Installing dependencies..."
+pip3 install -r requirements.txt
