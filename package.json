@@ -9,8 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "build": "./vercel-build.sh",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "./build.sh"
   },
   "dependencies": {
     "child_process": "^1.0.2",
